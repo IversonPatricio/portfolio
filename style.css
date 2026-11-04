@@ -1,0 +1,21 @@
+:root{--bg:#f7f8fb;--card:#fff;--ink:#1c2333;--muted:#5b6478;--accent:#2f6fed;--line:#e3e7ef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;opacity:0;transition:opacity .35s ease}
+body.loaded{opacity:1}body.leaving{opacity:0}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;flex-wrap:wrap;gap:10px}
+.brand{font-weight:700;color:var(--ink);text-decoration:none}
+.links a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:500}
+.links a.active,.links a:hover{color:var(--accent)}
+main{max-width:1000px;margin:auto;padding:48px 20px}
+h1{font-size:clamp(2rem,5vw,3rem);margin:.2em 0}.lead{font-size:1.2rem;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:18px 0;box-shadow:0 2px 10px rgba(20,30,60,.04)}
+.ph{background:#fff4d6;border:1px dashed #d9a400;padding:1px 6px;border-radius:5px;font-size:.92em}
+.tags span{display:inline-block;background:#eaf0fe;color:var(--accent);padding:4px 12px;border-radius:99px;margin:4px 4px 0 0;font-size:.9rem}
+.resume{display:grid;grid-template-columns:200px 1fr;gap:32px}
+.spy{position:sticky;top:80px;align-self:start}.spy a{display:block;padding:8px 12px;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+.spy a.on{color:var(--accent);border-color:var(--accent);font-weight:600}
+section{scroll-margin-top:80px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 20px;border-radius:10px;text-decoration:none;font-weight:600}
+footer{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}
+@media(max-width:720px){.resume{grid-template-columns:1fr}.spy{top:56px;display:flex;overflow-x:auto;background:var(--bg);z-index:5}.spy a{border-left:0;border-bottom:3px solid transparent;white-space:nowrap}.spy a.on{border-color:var(--accent)}.links a{margin:0 14px 0 0}}
